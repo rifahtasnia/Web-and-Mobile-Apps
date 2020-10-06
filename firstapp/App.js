@@ -19,10 +19,10 @@ function App() {
                 <stack.Screen name="Faculty List" component={FacultyListScreen} />
                 <stack.Screen name="My Profile" component={ProfileScreen} />
                 <stack.Screen name="Semesters" component={SemesterScreen} />
-                <stack.Screen name="FirstSemester" component={FirstSemesterScreen} />
-                <stack.Screen name="SecondSemester" component={SecondSemesterScreen} />
-                <stack.Screen name="ThirdSemester" component={ThirdSemesterScreen} />
-                <stack.Screen name="FourthSemester" component={FourthSemesterScreen} />
+                <stack.Screen name="First Semester" component={FirstSemesterScreen} />
+                <stack.Screen name="Second Semester" component={SecondSemesterScreen} />
+                <stack.Screen name="Third Semester" component={ThirdSemesterScreen} />
+                <stack.Screen name="Fourth Semester" component={FourthSemesterScreen} />
             </stack.Navigator>
         </NavigationContainer>
     );

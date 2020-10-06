@@ -21,6 +21,7 @@ const HomeScreen = (props) => {
                             props.navigation.navigate("My Profile");
                             //console.log("Button Pressed");
                         }}
+                        color="#3EA99F"
                     />
                 </View>
             </TouchableOpacity>
@@ -32,6 +33,7 @@ const HomeScreen = (props) => {
                         props.navigation.navigate("Semesters");
                         //console.log("Button Pressed");
                     }}
+                    color="#3EA99F"
                 />
             </View>
             <View style={styles.viewStyle}>
@@ -41,6 +43,7 @@ const HomeScreen = (props) => {
                         props.navigation.navigate("Faculty List");
                         //console.log("Button Pressed");
                     }}
+                    color="#3EA99F"
                 />
             </View>
         </View>

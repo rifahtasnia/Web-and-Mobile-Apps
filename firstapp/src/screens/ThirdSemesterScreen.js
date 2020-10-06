@@ -15,8 +15,8 @@ const ThirdSemesterScreen = () => {
         { name: "SWE 4304: Software Project Lab I", key: '10' },
     ];
     return (
-        <View style={styles.container}>
-            <Text style={styles.headerStyle}>Semester 3: Courses List</Text>
+        <View>
+            <Text style={styles.headerStyle}>Semester 3: Course List</Text>
             <Text> </Text>
             <FlatList
                 style={styles.ListStyle}
@@ -30,22 +30,19 @@ const ThirdSemesterScreen = () => {
 };
 
 const styles = StyleSheet.create({
-    container: {
-        paddingTop: 30,
-    },
     headerStyle: {
         fontSize: 30,
         fontWeight: "bold",
-        color: "#438D80",
+        color: "white",
         textAlign: "center",
-        textDecorationLine: "underline",
+        backgroundColor: "#3B9C9C",
     },
     textStyle: {
         fontSize: 20,
         color: "black",
         marginLeft: 15,
         marginRight: 10,
-        marginVertical: 5,
+        marginVertical: 10,
     },
 });
 

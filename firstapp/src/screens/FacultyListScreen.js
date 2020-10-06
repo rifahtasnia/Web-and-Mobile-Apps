@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, StyleSheet, FlatList } from "react-native";
+import { Text, View, StyleSheet, FlatList} from "react-native";
 
 const FacultyListScreen = () => {
     const facultyList = [
@@ -22,7 +22,6 @@ const FacultyListScreen = () => {
     return (
         <View>
             <Text style={styles.headerStyle}>FACULTY LIST</Text>
-            <Text> </Text>
             <FlatList
                 style={styles.ListStyle}
                 data={facultyList}
@@ -46,7 +45,7 @@ const styles = StyleSheet.create({
         fontSize: 20,
         color: "black",
         marginLeft: 20,
-        marginVertical: 5,
+        marginVertical: 7,
     },
 });
 
