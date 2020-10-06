@@ -5,7 +5,7 @@ const SemesterScreen = (props) => {
     //console.log(props);
     return (
         <View>
-            <Text style={styles.headerStyle}>SEMESTER</Text>
+            <Text style={styles.headerStyle}>SEMESTERS</Text>
             <Image
                 style={styles.imageStyle}
                 source={require("./../../assets/semester.png")} />
