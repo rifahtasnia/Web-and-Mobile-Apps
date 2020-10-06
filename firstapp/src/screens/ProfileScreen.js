@@ -4,8 +4,8 @@ import { Text, StyleSheet, View, Image } from "react-native";
 const ProfileScreen = () => {
     //console.log(props);
     return (
-        <View style={styles.container}>
-            <Text style={styles.headerStyle}>My Profile</Text>
+        <View>
+            <Text style={styles.headerStyle}>PROFILE</Text>
             <Image
                 style={styles.imageStyle}
                 source={require("./../../assets/myphoto.jpg")} />
@@ -19,14 +19,12 @@ const ProfileScreen = () => {
 };
 
 const styles = StyleSheet.create({
-    container: {
-        paddingTop: 30,
-    },
     headerStyle: {
         fontSize: 40,
         fontWeight: "bold",
-        color: "darkblue",
+        color: "white",
         textAlign: "center",
+        backgroundColor: "#3B9C9C",
     },
     textStyle: {
         fontSize: 20,
@@ -36,7 +34,7 @@ const styles = StyleSheet.create({
     },
     textStyle2: {
         fontSize: 25,
-        color: "darkblue",
+        color: "#438D80",
         textAlign: "left",
         marginLeft: 10,
     },

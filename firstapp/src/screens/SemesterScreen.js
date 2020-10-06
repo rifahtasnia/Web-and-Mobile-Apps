@@ -4,8 +4,9 @@ import { Text, StyleSheet, View, Image, Button } from "react-native";
 const SemesterScreen = (props) => {
     //console.log(props);
     return (
-        <View style={styles.container}>
-            <Text style={styles.textStyle}>Semesters</Text>
+        <View>
+            <Text style={styles.headerStyle}>SEMESTER</Text>
+
             <View style={styles.viewStyle}>
                 <Button
                     title="1st Semester"
@@ -33,19 +34,28 @@ const SemesterScreen = (props) => {
                     }}
                 />
             </View>
+
+            <View style={styles.viewStyle}>
+                <Button
+                    title="4th Semester"
+                    onPress={function () {
+                        props.navigation.navigate("FourthSemester");
+                    }}
+                />
+            </View>
+
         </View>
     );
 };
 
 const styles = StyleSheet.create({
-    container: {
-        paddingTop: 30,
-    },
-    textStyle: {
+    headerStyle: {
         fontSize: 40,
         fontWeight: "bold",
-        color: "darkblue",
+        color: "white",
         textAlign: "center",
+        backgroundColor: "#3B9C9C",
+        marginBottom: 150,
     },
     viewStyle: {
         paddingTop: 30,

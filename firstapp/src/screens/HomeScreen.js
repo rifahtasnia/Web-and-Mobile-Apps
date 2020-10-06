@@ -4,13 +4,14 @@ import { Text, StyleSheet, View, Button, TouchableOpacity, Image } from "react-n
 const HomeScreen = (props) => {
     //console.log(props);
     return (
-        <View style={styles.container}>
+        <View>
+            <Text style={styles.headerStyle}>HOME</Text>
 
             <Image
                 style={styles.imageStyle}
                 source={require("./../../assets/iutlogo.png")} />
-            <Text style={styles.textStyle}>Department Of CSE
-                Programme: SWE</Text>
+            <Text style={styles.textStyle}>DEPARTMENT OF CSE</Text>
+            <Text style={styles.textStyle2}>PROGRAMME : SWE</Text>
 
             <TouchableOpacity>
                 <View style={styles.viewStyle}>
@@ -47,17 +48,30 @@ const HomeScreen = (props) => {
 };
 
 const styles = StyleSheet.create({
-    container: {
-        paddingTop: 60,
+    headerStyle: {
+        fontSize: 40,
+        fontWeight: "bold",
+        color: "white",
+        textAlign: "center",
+        backgroundColor: "#3B9C9C",
+        marginBottom: 20,
     },
     textStyle: {
-        fontSize: 35,
+        fontSize: 30,
         fontWeight: "bold",
-        color: "green",
+        color: "#438D80",
         textAlign: "center",
         marginTop: 20,
     },
+    textStyle2: {
+        fontSize: 25,
+        fontWeight: "bold",
+        color: "#438D80",
+        textAlign: "center",
+        marginBottom: 40,
+    },
     imageStyle: {
+        marginTop: 20,
         width: 130,
         height: 220,
         alignSelf: "center",
