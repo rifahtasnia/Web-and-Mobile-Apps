@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, StyleSheet, FlatList} from "react-native";
+import { Text, View, StyleSheet, FlatList, Image } from "react-native";
 
 const FacultyListScreen = () => {
     const facultyList = [
@@ -18,34 +18,54 @@ const FacultyListScreen = () => {
         { name: "13. Tasnim Ahmed", key: '13' },
         { name: "14. Shahriar Ivan", key: '14' },
         { name: "15. Sadia Sharmin", key: '15' },
+
     ];
     return (
-        <View>
-            <Text style={styles.headerStyle}>FACULTY LIST</Text>
+        <View style={styles.container}>
+            <Text style={styles.headerStyle}>FACULTY MEMBERS LIST</Text>
+            <Image
+                style={styles.imageStyle}
+                source={require("./../../assets/faculty.jpg")} />
             <FlatList
                 style={styles.ListStyle}
                 data={facultyList}
                 renderItem={function ({ item }) {
                     return <Text style={styles.textStyle}>{item.name}</Text>;
                 }}
-            />
+                />
         </View>
     );
 };
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        overflow: 'hidden',
+        backgroundColor: '#F0FFFF',
+        justifyContent: 'flex-start',
+    },
     headerStyle: {
-        fontSize: 40,
+        fontSize: 30,
         fontWeight: "bold",
         color: "white",
         textAlign: "center",
         backgroundColor: "#3B9C9C",
     },
+    imageStyle: {
+        marginTop: 20,
+        marginBottom: 20,
+        width: 200,
+        height: 200,
+        alignSelf: "center",
+    },
     textStyle: {
         fontSize: 20,
         color: "black",
         marginLeft: 20,
-        marginVertical: 7,
+        marginVertical: 15,
+    },
+    ListStyle: {
+
     },
 });
 

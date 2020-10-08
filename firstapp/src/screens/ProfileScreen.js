@@ -4,7 +4,7 @@ import { Text, StyleSheet, View, Image } from "react-native";
 const ProfileScreen = () => {
     //console.log(props);
     return (
-        <View>
+        <View style={styles.container}>
             <Text style={styles.headerStyle}>PROFILE</Text>
             <Image
                 style={styles.imageStyle}
@@ -19,6 +19,12 @@ const ProfileScreen = () => {
 };
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        overflow: 'hidden',
+        backgroundColor: '#F0FFFF',
+        justifyContent: 'flex-start',
+    },
     headerStyle: {
         fontSize: 40,
         fontWeight: "bold",

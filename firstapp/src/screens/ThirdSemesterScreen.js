@@ -15,11 +15,9 @@ const ThirdSemesterScreen = () => {
         { name: "SWE 4304: Software Project Lab I", key: '10' },
     ];
     return (
-        <View>
+        <View style={styles.container}>
             <Text style={styles.headerStyle}>Semester 3: Course List</Text>
-            <Text> </Text>
             <FlatList
-                style={styles.ListStyle}
                 data={course_list}
                 renderItem={function ({ item }) {
                     return <Text style={styles.textStyle}>{item.name}</Text>;
@@ -30,19 +28,26 @@ const ThirdSemesterScreen = () => {
 };
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        overflow: 'hidden',
+        backgroundColor: '#F0FFFF',
+        justifyContent: 'flex-start',
+    },
     headerStyle: {
         fontSize: 30,
         fontWeight: "bold",
         color: "white",
         textAlign: "center",
         backgroundColor: "#3B9C9C",
+        marginBottom: 30,
     },
     textStyle: {
         fontSize: 20,
         color: "black",
         marginLeft: 15,
         marginRight: 10,
-        marginVertical: 10,
+        marginBottom: 30,
     },
 });
 

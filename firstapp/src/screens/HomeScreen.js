@@ -4,7 +4,7 @@ import { Text, StyleSheet, View, Button, TouchableOpacity, Image } from "react-n
 const HomeScreen = (props) => {
     //console.log(props);
     return (
-        <View>
+        <View style={styles.container}>
             <Text style={styles.headerStyle}>HOME</Text>
 
             <Image
@@ -13,18 +13,16 @@ const HomeScreen = (props) => {
             <Text style={styles.textStyle}>DEPARTMENT OF CSE</Text>
             <Text style={styles.textStyle2}>PROGRAMME : SWE</Text>
 
-            <TouchableOpacity>
-                <View style={styles.viewStyle}>
-                    <Button
-                        title="My Profile"
-                        onPress={function () {
-                            props.navigation.navigate("My Profile");
-                            //console.log("Button Pressed");
-                        }}
-                        color="#3EA99F"
-                    />
-                </View>
-            </TouchableOpacity>
+            <View style={styles.opacityViewStyle}>
+                <TouchableOpacity
+                    style={{ alignSelf: "center",}}
+                    onPress={function () {
+                        props.navigation.navigate("My Profile");
+                    }}
+                >
+                    <Text style={styles.opacityTextStyle}>My Profile</Text>
+                </TouchableOpacity>
+            </View>
 
             <View style={styles.viewStyle}>
                 <Button
@@ -51,6 +49,12 @@ const HomeScreen = (props) => {
 };
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        overflow: 'hidden',
+        backgroundColor: '#F0FFFF',
+        justifyContent: 'flex-start',
+    },
     headerStyle: {
         fontSize: 40,
         fontWeight: "bold",
@@ -83,6 +87,20 @@ const styles = StyleSheet.create({
         paddingTop: 30,
         marginLeft: 30,
         marginRight: 30,
+        alignContent: "center",
+    },
+    opacityViewStyle: {
+        backgroundColor: '#3EA99F',
+        marginTop: 10,
+        marginLeft: 45,
+        padding: 10,
+        width: 320,
+        borderRadius: 30,
+        alignContent: "center",
+    },
+    opacityTextStyle: {
+        fontSize: 18,
+        color: "white",
         alignContent: "center",
     },
 });
